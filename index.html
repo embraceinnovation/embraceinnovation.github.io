@@ -405,29 +405,6 @@ function country_block() {
     }
 }
 </script>
-<script>
- function timestamp() {
- 	var response = document.getElementById("g-recaptcha-response"); 
-	if (response == null || response.value.trim() == "") {
-		var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-		elems["ts"] = JSON.stringify(new Date().getTime());
-		document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
-		} 
-	} 
-	setInterval(timestamp, 500); 
-</script>
-<script>		
-    function urlValidate() {
-    var url = document.getElementById("website").value;
-    var regexp = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-	    if (url != "") {
-        if (!regexp.test(url)) {
-            alert("Please enter valid url such as http://www.company.com or domain.com");
-	    document.getElementById("website").value = "";
-	    website.focus();
-        } 
-    }
-}
 <script type='text/javascript' src='https://c.la1-c2-ia4.salesforceliveagent.com/content/g/js/56.0/deployment.js'></script>
 <script type='text/javascript'>
 liveagent.init('https://d.la1-c2-ia4.salesforceliveagent.com/chat', '5725w000000LyON', '00D5w000000Wt6H');
