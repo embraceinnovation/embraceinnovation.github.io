@@ -44,11 +44,31 @@
 <input type="submit" name="submit">
 
 </form>
+	
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Sscript to block right mouse click to view source code            -->
+<!--  ----------------------------------------------------------------------  -->	
 <script>
 document.addEventListener("contextmenu", e => e.preventDefault(), false);
 </script>
+	
+<!--  --------------------------------------------------------------------------------	-->
+<!--  NOTE: Script to DISABLE CONTROL AND ALL FUNCTION KEYS to inspect the web page     -->
+<!--  ----------------------------------------------------------------------  		-->	
+<script>
+document.addEventListener("keydown", e => {
+  // USE THIS TO DISABLE CONTROL AND ALL FUNCTION KEYS
+  // if (e.ctrlKey || (e.keyCode>=112 && e.keyCode<=123)) {
+  // THIS WILL ONLY DISABLE CONTROL AND F12
+  if (e.ctrlKey || e.keyCode==123) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+});
+</script>
+
 <p>
-  Try to right click on this page - Nothing will happen.
+  Try to press CTRL-U or F12 - Nothing will probably happen.
 </p>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
