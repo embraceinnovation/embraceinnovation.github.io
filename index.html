@@ -44,8 +44,12 @@
 <input type="submit" name="submit">
 
 </form>
-
-
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault(), false);
+</script>
+<p>
+  Try to right click on this page - Nothing will happen.
+</p>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
