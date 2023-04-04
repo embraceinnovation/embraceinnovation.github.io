@@ -66,10 +66,19 @@ document.addEventListener("keydown", e => {
   }
 });
 </script>
+<!--  ------------------------------------------------------------------------- -->
+<!--  Salesforce Chat Enablement Code for Website Page   	                -->
+<!--  ------------------------------------------------------------------------- -->
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
 
-<p>
-  Try to press CTRL-U or F12 - Nothing will probably happen.
-</p>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -95,17 +104,17 @@ document.addEventListener("keydown", e => {
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://ei1-dev-ed.my.salesforce.com',
-			'https://ei1-dev-ed.my.site.com/',
+			'https://embraceinnovationinc.my.salesforce.com',
+			'https://embraceinnovationinc.my.site.com/liveAgentSetupFlow',
 			gslbBaseURL,
-			'00D5w000000Wt6H',
-			'General_Chat2',
+			'00D3x0000020psv',
+			'Sales',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c2-ia4.salesforceliveagent.com/content',
-				deploymentId: '5725w000000LyON',
-				buttonId: '5735w000000LzJr',
-				baseLiveAgentURL: 'https://d.la1-c2-ia4.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'General_Chat',
+				baseLiveAgentContentURL: 'https://c.la1-c1-ia4.salesforceliveagent.com/content',
+				deploymentId: '5723x0000008sFb',
+				buttonId: '5733x000000D4aI',
+				baseLiveAgentURL: 'https://d.la1-c1-ia4.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Sales',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -113,7 +122,7 @@ document.addEventListener("keydown", e => {
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://ei1-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://embraceinnovationinc.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
@@ -121,7 +130,8 @@ document.addEventListener("keydown", e => {
 	} else {
 		initESW('https://service.force.com');
 	}
-</script>
+</script>	
+	
 </body>
 
 </html>
