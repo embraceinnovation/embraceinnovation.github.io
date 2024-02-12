@@ -4,11 +4,11 @@
         static private $conn;
 
         static public function Connect() {
-            $Host="ec2-184-73-169-163.compute-1.amazonaws.com";
-            $Database="d3pv6qg5cvuc59";
-            $User="fzswmayqajjxzt";
+            $Host="aws-0-us-west-1.pooler.supabase.com";
+            $Database="postgres";
+            $User="postgres.hpiypchogihjtfcfiypu";
             $Port="5432";
-            $Password="241aa4333fb36d1b42304785fd62df6f7269316ba0eb53672e41a5eb6dc559ed";
+            $Password="mxAgDWXqif1kUOlX";
 
             self::$conn = new PDO('pgsql:host='.$Host.';dbname='.$Database, $User, $Password);
         }
@@ -144,7 +144,7 @@
             }
             $sql = trim($sql, ",");
 
-            $sql .= " FROM salesforce.directory_account__c";
+            $sql .= " FROM public.directory_account__c";
 
             return $sql;
         }
