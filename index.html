@@ -55,8 +55,35 @@ body {font-family: Arial;}
 </div>
 
 <div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+  <form method="post" action="process.php">
+		Companyname:<br>
+		<input type="text" name="name">
+		<br>
+		Street:<br>
+		<input type="text" name="shipping_street__c">
+		<br>
+		City:<br>
+		<input type="text" name="shipping_city__c">
+		<br>
+		Co-Exhibitor Amount:
+		<input type="number" name="co_exhibitor_total__c">
+		<br><br>
+		<input type="submit" name="save" value="submit">
+	</form>
+	<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>  
 </div>
 
 <div id="Paris" class="tabcontent">
