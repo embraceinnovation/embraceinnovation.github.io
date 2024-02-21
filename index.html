@@ -1,21 +1,108 @@
 <html>
 <head>
-<title>Page Title</title>
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  width: 1400px;
+  margin: 48px auto;
+  border-bottom: 1px solid #DAE0E7;
+  background: #F9F9F9;
+  list-style-type: none;
+  padding:12px 12px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.tab {
+  float: left;
+  height: 44px;
+  margin: 0 8px -1px 0;
+  border: 1px solid #DAE0E7;
+ background: #F9F9F9;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.tab, .tab a {
+  transition: all .25s;
+}
+
+.tab a {
+  display: inline-block;
+}
+
+.tab a:first-child {
+  padding: 12px 2px 12px 16px;
+ white-space: nowrap;
+}
+
+.tab.tabClosed, .tab.tabClosed a:first-child {
+  margin-right: 0;
+  border-width: 0;
+}
+
+.tab.tabClosed {
+  width: 0 !important;/* use important because we need to set the width of tabs in javascript in order to be able to animate them to 0 */
+}
+
+.tab.tabClosed a {
+  opacity: 0;
+}
+
+.tab:hover {
+  background: #fff;
+}
+
+.tabSelected {
+  height: 45px;
+  border-bottom: none;
+  background: #fff;
+}
+
+.closeTab {
+  width: 16px;
+  height: 16px;
+  margin: 0 14px 0 12px;
+  padding: 3px;
+  border-radius: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.closeTab:hover {
+  background: #DAE0E7;
+}
 </head>
 <body>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<nav class="nav nav-pills flex-column flex-sm-row">
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-</nav>
+<h2>Close those tabs!</h2>
 
+<br />
+
+<ul>
+  <li class="tab tabSelected"><a href="#">Some Thing</a><a class="closeTab" href="">✕</a></li>
+    <li class="tab selected"><a href="#">Some Thing 2</a><a class="closeTab" href="">✕</a></li>
+    <li class="tab selected"><a href="#">Some Thing 3</a><a class="closeTab" href="">✕</a></li>
+    <li class="tab selected"><a href="#">Some Thing 4</a><a class="closeTab" href="">✕</a></li>
+  <li class="tab selected"><a href="#">Some Thing 2</a><a class="closeTab" href="">✕</a></li>
+    <li class="tab selected"><a href="#">Some Thing 3</a><a class="closeTab" href="">✕</a></li>
+    <li class="tab selected"><a href="#">Some Thing 4</a><a class="closeTab" href="">✕</a></li>
+</ul>
 
 </body>
 </html>
